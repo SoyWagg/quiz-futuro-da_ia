@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d18">
+  <meta name="description" content="Um quiz interativo para refletir sobre como a inteligência artificial pode influenciar o futuro.">
+  <title>Você decide o futuro da IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="caixa-principal" id="app">
+    <div class="marca"><span class="marca-icone" aria-hidden="true">✳</span> FUTURO EM CONSTRUÇÃO</div>
+    <header class="cabecalho">
+      <p class="sobretitulo">UM QUIZ SOBRE TECNOLOGIA</p>
+      <h1>Você decide o <span>futuro da IA</span></h1>
+      <p class="introducao">Suas escolhas ajudam a imaginar como humanos e inteligência artificial podem conviver.</p>
+    </header>
+
+    <section class="quiz" aria-labelledby="titulo-pergunta">
+      <div class="progresso-cabecalho">
+        <span id="contador-perguntas">PERGUNTA 1 DE 5</span>
+        <span id="porcentagem-progresso">20%</span>
+      </div>
+      <div class="barra-progresso" role="progressbar" aria-label="Progresso do quiz" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" id="barra-progresso">
+        <span id="preenchimento-progresso"></span>
+      </div>
+      <p class="categoria" id="categoria-pergunta">PRIMEIRAS IMPRESSÕES</p>
+      <h2 class="caixa-perguntas" id="titulo-pergunta" tabindex="-1"></h2>
+      <p class="instrucao">Escolha a alternativa que mais combina com você.</p>
+      <div class="caixa-alternativas" id="alternativas" role="group" aria-labelledby="titulo-pergunta"></div>
+      <div class="navegacao">
+        <button class="botao-secundario" id="voltar" type="button" disabled>← Voltar</button>
+        <span id="dica-teclado">Não existe resposta perfeita.</span>
+      </div>
+    </section>
+
+    <section class="caixa-resultado" id="resultado" aria-live="polite" hidden>
+      <div class="resultado-simbolo" aria-hidden="true">✦</div>
+      <p class="sobretitulo">SEU PERFIL</p>
+      <h2 id="titulo-resultado"></h2>
+      <p class="texto-resultado" id="texto-resultado"></p>
+      <div class="resumo-escolhas" id="resumo-escolhas"></div>
+      <button class="botao-principal" id="reiniciar" type="button">Refazer o quiz <span aria-hidden="true">↻</span></button>
+    </section>
+    <footer><span>TECNOLOGIA COM CONSCIÊNCIA</span><span>© <span id="ano-atual"></span></span></footer>
+  </main>
+</body>
+</html>
